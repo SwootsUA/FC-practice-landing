@@ -1,19 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фонд підтримки постраждалих від війни</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="shortcut icon" href="./assets/images/star-logo.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
+        <a href="/"><img src="./assets/images/star-logo.png" alt="Логотип фонду"></a>
+        <nav>
+            <ul>
+                <li><a href="#contacts">Контакти</a></li>
+                <li><a href="#hero">Головна</a></li>
+                <li><a href="#about">З чим ми працюємо</a></li>
+                <li><a href="#support" class="button blue">Підтримати фонд</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <section id="hero">
+            <h1 class="hero-motto">Фонд підтримки постраждалих від війни</h1>
+            <p>Ми хочемо допомогти кожному, хто постраждав під час війни</p>
+            <a href="#support" class="button">Підтримати фонд</a>
+        </section>
+        <section id="about">
+            <h2>Ми - фонд підтримки постраждалих від війни</h2>
+            <p>Наша мета - психологічна та гуманітарна допомога українцям</p>
+            <p>Кожен, хто звернеться, отримає допомогу, яка у наших силах</p>
+            <section>
+                <h3>Реабілітаційний центр</h3>
+                <p>Ми допомагаємо людям, які постраждали знайти правильне лікування. У нашому фонді є чотири напрями:
+                    фізичної та реабілітаційної медицини, терапевтичне, неврологічне та хірургічне. Ми маємо
+                    заклади-партнери, де швидко та якісно можуть надати допомогу.</p>
+                <img src="./assets/images/man-with-leg-prosthesis.png" alt="Чоловік із протезом ноги">
+            </section>
+
+            <section>
+                <h3>Робота з дітьми</h3>
+                <p>Діти – найвразливіша частина суспільства, і їм особливо потрібна підтримка дорослих. Тому наш фонд
+                    збирає речі для дітей, проводить літні й зимові табори, майстер-класи та за потреби – дитячих
+                    прсихотерапевтів.</p>
+                <img src="./assets/images/kids-in-a-camp-during-master-class.png" alt="Діти в таборі на майстер-класі">
+            </section>
+            <a href="/" class="button blue">Дізнатися більше</a>
+        </section>
+        <section id="mission">
+            <h2>Наша місія – щоб кожен українець мав можливість отримати допомогу й не залишився наодинці зі своїми
+                проблемами</h2>
+            <div>
+                <img src="./assets/images/stripes.png" alt="Декоративні смуги">
+                <img src="./assets/images/smiley-little-kids-holding-each-other.png"
+                    alt="Усміхнені діти обіймають одне одного">
+            </div>
+        </section>
+        <section id="support">
+            <h2>Підтримайте нашу роботу!</h2>
+            <p>Усі ваші донати йдуть саме на роботу фонду, заробітні плати ми виплачуємо з коштів грантодавців</p>
+            <div class="support-goal">
+                <p>Наша мета 10 000 000 гривень! </p>
+                <span>00</span> <span>230</span> <span>025</span>
+            </div>
+            <a href="/" class="button blue">Дізнатися більше</a>
+        </section>
     </main>
     <footer>
-
+        <section id="contacts">
+            <h2>Контакти</h2>
+            <div class="contacts-container">
+                <a href="tel:+380987654321"><img src="./assets/images/Phone.png" alt="Іконка телефону"></a>
+                <p>Якщо у вас виникають питання – телефонуйте за номером <span class="bold">0-987-654-321</span></p>
+                <a href="/" target="_blank"><img src="./assets/images/TelegramLogo.png" alt="Логотип Телеграм"></a>
+                <a href="/" target="_blank"><img src="./assets/images/WhatsappLogo.png" alt="Логотип Ватсап"></a>
+                <p>Або пишіть на у чат-бот</p>
+            </div>
+        </section>
+        <section>
+            <img src="./assets/images/email.png" alt="Іконка електронної пошти">
+            <div class="form-container">
+                <p>Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку</p>
+                <form>
+                    <input type="text" placeholder="Ім'я" name="name">
+                    <input type="email" placeholder="Емейл" name="email">
+                    <button class="button blue">Підписатися</button>
+                </form>
+            </div>
+        </section>
     </footer>
 </body>
 
