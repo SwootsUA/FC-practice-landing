@@ -6,15 +6,22 @@
 
 :root {
     font-family: "Montserrat", sans-serif;
+    --header-height: 150px;
+}
+
+html {
+    scroll-padding-top: var(--header-height);
 }
 
 .header {
     display: flex;
+    height: var(--header-height);
     position: sticky;
     top: 0;
     background-color: white;
+    align-items: center;
     justify-content: space-between;
-    padding: 40px 80px;
+    padding: 0 80px;
 }
 
 .logo-img {
@@ -43,6 +50,7 @@
     text-transform: uppercase;
     padding: 21px 35px;
     border-radius: 2rem;
+    width: fit-content;
 }
 
 .blue {
@@ -77,6 +85,61 @@
 }
 
 .hero-description {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 20px 0;
+}
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding-bottom: 250px;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-header h2 {
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    width: 1100px;
+    text-align: center;
+}
+
+.about-description {
+    margin: 30px 0 15px;
+    font-size: 2rem;
+}
+
+.accent-text {
+    color: #73A6B1;
+    font-size: 1.5rem;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content-container {
+    width: 550px;
+    font-size: 1.25rem;
+    margin-right: 140px;
+}
+
+.about-sub-header {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    border-radius: 10px;
 }
