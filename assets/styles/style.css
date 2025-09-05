@@ -6,16 +6,22 @@
 
 :root {
     font-family: "Montserrat", sans-serif;
-    --header-height: 150px;
+    font-weight: 400;
+    --header-height: 190px;
 }
 
 html {
     scroll-padding-top: var(--header-height);
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .header {
-    display: flex;
     height: var(--header-height);
+    display: flex;
     position: sticky;
     top: 0;
     background-color: white;
@@ -25,12 +31,12 @@ html {
 }
 
 .logo-img {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
 }
 
 .header-links {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     align-items: center;
     height: 100%;
     display: flex;
@@ -48,8 +54,8 @@ html {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 21px 35px;
-    border-radius: 2rem;
+    padding: 25px 35px;
+    border-radius: 2.25rem;
     width: fit-content;
 }
 
@@ -62,9 +68,10 @@ html {
 }
 
 .hero-page {
-    display: flex;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-image: url('../images/hero-background.png');
@@ -73,8 +80,8 @@ html {
 }
 
 .hero-content {
-    padding-left: 200px;
-    width: 40%;
+    padding-left: 250px;
+    grid-column: 1; 
 }
 
 .hero-motto {
@@ -86,18 +93,21 @@ html {
 
 .hero-description {
     font-size: 1.5rem;
+    max-width: 80%;
     margin: 20px 0;
 }
 
 .about-page {
-    display: flex;
-    flex-direction: column;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 100px;
     padding-bottom: 250px;
 }
 
 .about-header {
+    grid-column: 1 / span 2;
     display: flex;
     flex-direction: column;
     height: 550px;
@@ -123,23 +133,69 @@ html {
 }
 
 .about-section {
-    display: flex;
-    justify-content: center;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
 .about-content-container {
-    width: 550px;
-    font-size: 1.25rem;
-    margin-right: 140px;
+    width: 750px;
+    font-size: 1.75rem;
+    justify-self: center;
+    margin-right: 50px;
 }
 
 .about-sub-header {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 15px;
 }
 
 .about-image {
+    height: 560px;
     border-radius: 10px;
+}
+
+.mission-page {
+    grid-column: 1 / span 2;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 200px;
+    align-items: center;
+}
+
+.mission-header {
+    display: inline-block;
+    max-width: 700px;
+    justify-self: end;
+}
+
+.images-container {
+    position: relative;
+    height: 700px;
+    width: 500px;
+    transform: scale(1.25);
+}
+
+.stripes-image {
+    position: absolute;
+    z-index: -1;
+    translate: 0 35%;
+}
+
+.mission-image {
+    position: absolute;
+    z-index: -1;
+    translate: 28%;
+}
+
+.footer {
+    grid-column: 1 / span 2;
+}
+
+.know-more-btn {
+    grid-column: 1 / span 2;
+    justify-self: center;
 }
