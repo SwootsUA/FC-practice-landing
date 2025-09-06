@@ -8,7 +8,6 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     --header-height: 190px;
-    font-size: 18px;
 }
 
 html {
@@ -37,7 +36,7 @@ main {
 }
 
 .header-links {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     align-items: center;
     height: 100%;
     display: flex;
@@ -58,7 +57,7 @@ main {
     padding: 25px 35px;
     border-radius: 2.25rem;
     width: fit-content;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     cursor: pointer;
     border: none;
 }
@@ -91,12 +90,12 @@ main {
 .hero-motto {
     color: white;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 800;
 }
 
 .hero-description {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     max-width: 80%;
     margin: 20px 0;
 }
@@ -121,19 +120,19 @@ main {
 
 .about-header h2 {
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: 5rem;
     width: 1300px;
     text-align: center;
 }
 
 .about-description {
     margin: 30px 0 15px;
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 .accent-text {
     color: #73A6B1;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .about-section {
@@ -145,14 +144,14 @@ main {
 
 .about-content-container {
     width: 750px;
-    font-size: 1.75rem;
+    font-size: 2rem;
     justify-self: center;
     margin-right: 50px;
 }
 
 .about-sub-header {
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin-bottom: 15px;
 }
 
@@ -163,7 +162,7 @@ main {
 
 .mission-page {
     grid-column: 1 / span 2;
-    font-size: 2rem;
+    font-size: 2.25rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 200px;
@@ -202,18 +201,18 @@ main {
 }
 
 .support-header {
-    font-size: 4.5rem;
+    font-size: 5rem;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
 
 .support-goal {
-    font-size: 2rem;
+    font-size: 2.25rem;
     margin-top: 70px;
 }
 
 .goal-counter {
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin: 40px 0 80px
 }
 
@@ -247,7 +246,7 @@ main {
 }
 
 .footer-title {
-    font-size: 4.5rem;
+    font-size: 5rem;
     text-transform: uppercase;
 }
 
@@ -258,7 +257,7 @@ main {
     justify-content: center;
     padding-left: 100px;
     text-align: left;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     max-width: 500px;
 }
 
@@ -309,7 +308,7 @@ main {
 
 .newsletter-title {
     margin-bottom: 40px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     max-width: 520px;
 }
 
@@ -325,7 +324,7 @@ main {
     border-radius: 2rem;
     border: none;
     padding: 0 50px;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     outline: none;
     background-color: #F9FADF;
 }
