@@ -7,11 +7,12 @@
 :root {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    --header-height: 190px;
+    --header-outer-height: 190px;
+    --header-inner-height: 120px;
 }
 
 html {
-    scroll-padding-top: var(--header-height);
+    scroll-padding-top: var(--header-inner-height);
 }
 
 main {
@@ -30,9 +31,32 @@ main {
     padding: 0 80px;
 }
 
-.logo-img {
-    width: 80px;
-    height: 80px;
+.header-outer{
+    height: var(--header-outer-height);
+    position: sticky;
+    top: calc(var(--header-inner-height) - var(--header-outer-height));
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: 2px -97px 96px 81px rgba(0,0,0,0.81);
+}
+
+.header-inner{
+    height: var(--header-inner-height);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 80px;
+    transition: padding 180ms ease, transform 180ms ease;
+}
+
+.logo-img{
+    width: auto;
+    height: calc(var(--header-inner-height) - 20px);
+    transition: height 180ms ease;
 }
 
 .header-links {
