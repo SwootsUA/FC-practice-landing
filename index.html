@@ -86,28 +86,47 @@
             <a href="/" class="know-more-btn button blue">Дізнатися більше</a>
         </section>
     </main>
-    <footer class="footer">
-        <section id="contacts">
-            <h2>Контакти</h2>
-            <div class="contacts-container">
-                <a href="tel:+380987654321"><img src="./assets/images/Phone.png" alt="Іконка телефону"></a>
-                <p>Якщо у вас виникають питання – телефонуйте за номером <span class="bold">0-987-654-321</span></p>
-                <a href="/" target="_blank"><img src="./assets/images/TelegramLogo.png" alt="Логотип Телеграм"></a>
-                <a href="/" target="_blank"><img src="./assets/images/WhatsappLogo.png" alt="Логотип Ватсап"></a>
-                <p>Або пишіть на у чат-бот</p>
+    <footer id="contacts" class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <h2 class="footer-title">Контакти</h2>
+
+                <div class="contact-block">
+                    <a class="icon-link" href="tel:+380987654321" aria-label="Телефон">
+                        <img src="./assets/images/Phone.png" alt="" class="icon-small">
+                    </a>
+                    <p>Якщо у вас виникають питання – телефонуйте за номером</p>
+                    <p class="phone-number">0-987-654-321</p>
+
+                    <div class="contact-icons">
+                        <a class="icon-link" href="#" target="_blank" aria-label="Telegram">
+                            <img src="./assets/images/TelegramLogo.png" alt="Telegram" class="icon-small">
+                        </a>
+                        <a class="icon-link" href="#" target="_blank" aria-label="WhatsApp">
+                            <img src="./assets/images/WhatsappLogo.png" alt="WhatsApp" class="icon-small">
+                        </a>
+                    </div>
+
+                    <p>Або пишіть нашому чат-боту</p>
+                </div>
             </div>
-        </section>
-        <section>
-            <img src="./assets/images/email.png" alt="Іконка електронної пошти">
-            <div class="form-container">
-                <p>Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку</p>
-                <form>
-                    <input type="text" placeholder="Ім'я" name="name">
-                    <input type="email" placeholder="Емейл" name="email">
-                    <button class="button blue">Підписатися</button>
-                </form>
+
+            <div class="footer-bottom">
+                <div class="newsletter-left">
+                    <img src="./assets/images/email.png" alt="Конверт з листом" class="newsletter-image">
+                </div>
+
+                <div class="newsletter-right">
+                    <h3 class="newsletter-title">Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку</h3>
+
+                    <form class="newsletter-form" action="#" method="post" novalidate>
+                        <input type="text" name="name" placeholder="Ім'я" aria-label="Ім'я">
+                        <input type="email" name="email" placeholder="Емейл" aria-label="Емейл" required>
+                        <button type="submit" class="button blue full-width">Підписатися</button>
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
     </footer>
 </body>
 
