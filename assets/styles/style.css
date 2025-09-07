@@ -8,21 +8,15 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     --header-height: 120px;
-}
-
-html {
     scroll-padding-top: var(--header-height);
 }
 
-.header {
-    height: var(--header-height);
-    display: flex;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
+body {
+    overflow-x: hidden;
+}
+
+.burger-menu {
+    display: none;
 }
 
 .header {
@@ -32,7 +26,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     padding: 0 80px;
     background-color: white;
     box-shadow: 2px -97px 96px 81px rgba(0,0,0,0.81);
@@ -46,15 +40,15 @@ html {
 .header-links {
     font-size: 1.4rem;
     align-items: center;
-    height: 100%;
     display: flex;
+    gap: 10px;
 }
 
 .header-link {
     color: black;
     text-decoration: none;
-    padding: 10px 15px;
-    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .button {
@@ -72,10 +66,30 @@ html {
 
 .blue {
     background-color: #7AE5FD;
+    transition: background-color 0.1s;
+
+    &:hover {
+        background-color: #7ac9fd;
+        transition: background-color 0.5s;
+    }
+
+    &:active {
+        background-color: #7a99fd;
+    }
 }
 
 .white {
     background-color: white;
+    transition: background-color 0.1s;
+
+    &:hover {
+        background-color: #eaeaea;
+        transition: background-color 0.5s;
+    }
+
+    &:active {
+        background-color: #ccc;
+    }
 }
 
 .hero-page {
@@ -90,14 +104,14 @@ html {
 }
 
 .hero-content {
-    padding-left: 250px;
-    grid-column: 1; 
+    padding-left: 13vw;
+    grid-column: 1 / span 1; 
 }
 
 .hero-motto {
     color: white;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: clamp(2.4rem, 4vw, 5rem);
     font-weight: 800;
 }
 
@@ -112,7 +126,7 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    padding-bottom: 250px;
+    padding: 0 20px 250px;
 }
 
 .about-header {
@@ -124,8 +138,8 @@ html {
     
     h2 {
         text-transform: uppercase;
-        font-size: 5rem;
-        width: 1300px;
+        font-size: clamp(2.4rem, 4vw, 5rem);
+        padding: 0 10vw;
     }
 }
 
@@ -141,30 +155,29 @@ html {
 
 .about-section {
     display: flex;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 100px;
 }
 
 .about-content-container {
     width: 750px;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2rem, 2rem);
     justify-self: end;
 }
 
 .about-sub-header {
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 3.5vw, 4.5rem);
     margin-bottom: 15px;
 }
 
 .about-image {
-    height: 560px;
     border-radius: 10px;
     overflow: hidden;
 
     img {
-        height: 100%;
+        height: auto;
+        display: block;
     }
 }
 
@@ -201,11 +214,11 @@ html {
 
 .support-page {
     text-align: center;
-    padding: 200px 0;
+    padding: 200px 30px;
 }
 
 .support-header {
-    font-size: 5rem;
+    font-size: clamp(2.4rem, 4vw, 5rem);
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -270,7 +283,7 @@ html {
 
 .phone-number {
     font-weight: 700;
-    padding-bottom: 60px;
+    padding: 10px 0 50px;
 }
 
 .icon-link {
@@ -306,6 +319,7 @@ html {
 .newsletter-right {
     justify-self: start;
     align-self: center;
+    padding: 20px;
 }
 
 .newsletter-title {
@@ -333,4 +347,77 @@ html {
 
 .full-width {
     width: 100%;
+}
+
+@media (max-width: 1500px) {
+    :root {
+        --header-height: 90px;
+    }
+
+    .about-page {
+        padding: 0 20px 100px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .about-sub-header {
+        font-size: 3rem;
+    }
+
+    .about-content-container {
+        font-size: clamp(1rem, 1.5rem, 2rem);
+    }
+
+    .images-container {
+        transform: scale(1);
+    }
+
+    .mission-header {
+        padding-left: 20px;
+    }
+
+    .mission-page {
+        font-size: 2rem;
+    }
+
+    .support-page {
+        padding: 100px 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header-links.active {
+        right: 10px;
+        transition: right 2s;
+    }
+
+    .header-links {
+        position: absolute;
+        top: 15px;
+        right: -400px;
+        padding: 10px;
+        border-radius: 0 0 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        background-color: white;
+        transition: right 2s;
+    }
+
+    .burger-menu {
+        height: var(--header-height);
+        cursor: pointer;
+        transform: scaleX(-1);
+        display: block;
+        opacity: 1;
+        transition: opacity 2s;
+    }
+
+    .burger-menu.hidden {
+        opacity: 0;
+        transition: opacity 2s;
+    }
 }
