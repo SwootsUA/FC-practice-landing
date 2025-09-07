@@ -29,7 +29,7 @@ A landing page developed as part of a master's  practice in Uni with Freshcode.
 
 This project is intended for deployment on GitHub Pages.
 
-The live site is available at: `https://swootsua.github.io/FC-practice-landing/`
+The live site is available at: [`https://swootsua.github.io/FC-practice-landing/`](https://swootsua.github.io/FC-practice-landing/)
 
 ## Tech Stack
 
