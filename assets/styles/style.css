@@ -8,6 +8,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     --header-height: 120px;
+    --footer-color: #F9FADF;
     scroll-padding-top: var(--header-height);
 }
 
@@ -29,11 +30,11 @@ body {
     width: 100%;
     padding: 0 80px;
     background-color: white;
-    box-shadow: 2px -97px 96px 81px rgba(0,0,0,0.81);
+    box-shadow: 0 0 25px 20px rgba(0,0,0,0.26);
+    z-index: 1;
 }
 
 .logo-img {
-    width: auto;
     height: calc(var(--header-height) - 20px);
 }
 
@@ -66,29 +67,27 @@ body {
 
 .blue {
     background-color: #7AE5FD;
-    transition: background-color 0.1s;
+    transition: background-color 0.3s;
 
-    &:hover {
-        background-color: #7ac9fd;
-        transition: background-color 0.5s;
+    &:hover { 
+        background-color: #7ac9fd; 
     }
 
-    &:active {
-        background-color: #7a99fd;
+    &:active { 
+        background-color: #7a99fd; 
     }
 }
 
 .white {
     background-color: white;
-    transition: background-color 0.1s;
+    transition: background-color 0.3s;
 
-    &:hover {
-        background-color: #eaeaea;
-        transition: background-color 0.5s;
+    &:hover { 
+        background-color: #eaeaea; 
     }
 
-    &:active {
-        background-color: #ccc;
+    &:active { 
+        background-color: #ccc; 
     }
 }
 
@@ -101,7 +100,6 @@ body {
     background-image: url('../images/hero-background.png');
     background-position: 50%;
     background-size: cover;
-    object-fit: cover;
 }
 
 .hero-content {
@@ -162,7 +160,7 @@ body {
 
 .about-content-container {
     width: 750px;
-    font-size: clamp(1rem, 2rem, 2rem);
+    font-size: 2rem;
     justify-self: end;
 }
 
@@ -201,7 +199,6 @@ body {
     position: relative;
     width: 700px;
     height: 500px;
-    z-index: -1; 
 }
 
 .images-container img {
@@ -253,7 +250,7 @@ body {
 }
 
 .footer {
-    background-color: #F9FADF;
+    background-color: var(--footer-color);
     padding: 100px 80px;
     color: #1e1e1e;
 }
@@ -352,7 +349,7 @@ body {
     padding: 0 50px;
     font-size: 1.4rem;
     outline: none;
-    background-color: #F9FADF;
+    background-color: var(--footer-color);
 }
 
 .full-width {
@@ -427,7 +424,6 @@ body {
         right: 0;
         padding: 15px 10px 10px;
         border-radius: 0 0 0 20px;
-        display: flex;
         flex-direction: column;
         gap: 30px;
         background-color: white;
