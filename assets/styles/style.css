@@ -7,12 +7,11 @@
 :root {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    --header-outer-height: 190px;
-    --header-inner-height: 120px;
+    --header-height: 120px;
 }
 
 html {
-    scroll-padding-top: var(--header-inner-height);
+    scroll-padding-top: var(--header-height);
 }
 
 main {
@@ -31,18 +30,8 @@ main {
     padding: 0 80px;
 }
 
-.header-outer{
-    height: var(--header-outer-height);
-    position: sticky;
-    top: calc(var(--header-inner-height) - var(--header-outer-height));
-    display: flex;
-    align-items: center;
-    background: white;
-    box-shadow: 2px -97px 96px 81px rgba(0,0,0,0.81);
-}
-
-.header-inner{
-    height: var(--header-inner-height);
+.header {
+    height: var(--header-height);
     position: sticky;
     top: 0;
     display: flex;
@@ -50,13 +39,13 @@ main {
     justify-content: space-between;
     width: 100%;
     padding: 0 80px;
-    transition: padding 180ms ease, transform 180ms ease;
+    background-color: white;
+    box-shadow: 2px -97px 96px 81px rgba(0,0,0,0.81);
 }
 
-.logo-img{
+.logo-img {
     width: auto;
-    height: calc(var(--header-inner-height) - 20px);
-    transition: height 180ms ease;
+    height: calc(var(--header-height) - 20px);
 }
 
 .header-links {
@@ -164,13 +153,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 100px;
 }
 
 .about-content-container {
     width: 750px;
     font-size: 2rem;
-    justify-self: center;
-    margin-right: 50px;
+    justify-self: end;
 }
 
 .about-sub-header {
@@ -189,7 +178,6 @@ main {
     font-size: 2.25rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 200px;
     align-items: center;
 }
 
@@ -221,7 +209,7 @@ main {
     grid-column:  1 / span 2;
     justify-self: center;
     text-align: center;
-    margin-bottom: 200px;
+    padding: 200px 0;
 }
 
 .support-header {
