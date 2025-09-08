@@ -35,7 +35,7 @@ body {
 }
 
 .logo-img {
-    height: calc(var(--header-height) - 20px);
+    height: calc(var(--header-height) - 1rem);
 }
 
 .header-links {
@@ -57,7 +57,7 @@ body {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 25px 35px;
+    padding: 1.55rem 2.2rem;
     border-radius: 2.25rem;
     width: fit-content;
     font-size: 1.4rem;
@@ -95,7 +95,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    height: 100vh;
+    min-height: calc(100vh - var(--header-height));
     background-repeat: no-repeat;
     background-image: url('../images/hero-background.jpg');
     background-position: 50%;
@@ -176,7 +176,7 @@ body {
 
     img {
         height: auto;
-        width: 600px;
+        max-width: clamp(14rem, 80vw, 37.5rem);
         display: block;
     }
 }
@@ -198,8 +198,8 @@ body {
 .images-container {
     justify-self: center;
     position: relative;
-    width: 700px;
-    height: 500px;
+    width: clamp(20rem, 55vw, 45rem);
+    height: clamp(20rem, 40vw, 30rem);
 }
 
 .images-container img {
@@ -298,13 +298,13 @@ body {
 }
 
 .phone-icon {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
 }
 
 .phone-number {
     font-weight: 700;
-    padding: 10px 0 50px;
+    padding: 1rem 0 3rem;
 }
 
 .icon-link {
@@ -313,8 +313,8 @@ body {
 }
 
 .icon-small {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     display: inline-block;
 }
 
@@ -323,19 +323,20 @@ body {
 }
 
 .newsletter-image {
-    max-width: 100%;
+    display: block;
+    width: 100%;
     height: auto;
-    width: 600px;
+    max-width: clamp(12rem, 50vw, 37.5rem);
 }
 
 .newsletter-right {
     justify-self: start;
     align-self: center;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .newsletter-title {
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
     font-size: 1.8rem;
     max-width: 520px;
 }
@@ -343,7 +344,7 @@ body {
 .newsletter-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     max-width: 700px;
 }
 
@@ -351,7 +352,7 @@ body {
     height: 4rem;
     border-radius: 2rem;
     border: none;
-    padding: 0 50px;
+    padding: 0 3rem;
     font-size: 1.4rem;
     outline: none;
     background-color: var(--footer-color);
@@ -382,11 +383,6 @@ body {
     .about-content-container {
         font-size: clamp(1rem, 1.5rem, 2rem);
         text-align: center;
-    }
-
-    .images-container {
-        width: 560px;
-        height: 400px;
     }
 
     .stripes-image {
@@ -421,16 +417,14 @@ body {
         padding: 0 20px;
     }
 
-    
-
     .header-links {
         position: fixed;
         top: 0;
         right: 0;
-        padding: 15px 10px 10px;
+        padding: 1rem;
         border-radius: 0 0 0 20px;
         flex-direction: column;
-        gap: 30px;
+        gap: 2rem;
         background-color: white;
         transform: translateX(110%);
         transition: transform .35s ease-out;
@@ -445,15 +439,20 @@ body {
     .burger-menu {
         height: var(--header-height);
         cursor: pointer;
-        transform: scaleX(-1);
         display: block;
-        opacity: 1;
-        transition: opacity 2s;
+        background-color: transparent;
+        border: none;
+        
+        img {
+            height: 100%;
+            opacity: 1;
+            transform: scaleX(-1);
+            transition: opacity 2s;
+        }
     }
 
-    .burger-menu.hidden {
+    .burger-menu.hidden img {
         opacity: 0;
-        transition: opacity 2s;
     }
 }
 
@@ -482,8 +481,6 @@ body {
     }
 
     .images-container {
-        width: 425px;
-        height: 400px;
         justify-self: center;
     }
 
@@ -499,18 +496,12 @@ body {
     }
 
     .newsletter-image {
-        display: block;
-        max-width: 300px;
         justify-self: center;
         align-self: center;
     }
 
     .about-content-container {
         width: 100%;
-    }
-
-    .about-image img {
-        width: 300px;
     }
 }
 
@@ -537,10 +528,6 @@ body {
         font-size: clamp(6px, 3vw, 1rem);
     } 
 
-    .images-container {
-        width: clamp(100px, 100%, 420px);
-    }
-
     .about-sub-header {
         font-size: 2rem;
     }
@@ -556,10 +543,6 @@ body {
 
     .about-description {
         font-size: 1.5rem;
-    }
-
-    .mission-page {
-        margin: 0;
     }
 }
 
@@ -582,7 +565,7 @@ body {
     }
 
     .button {
-        padding: 15px 25px;
+        padding: 1rem 1.5rem;
     }
 
     .goal-counter {
@@ -599,10 +582,6 @@ body {
     }
 
     .support {
-        padding-inline: 10px;
-    }
-
-    .newsletter-image {
-        width: 200px;
+        padding-inline: 0.6rem;
     }
 }
