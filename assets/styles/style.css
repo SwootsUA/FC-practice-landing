@@ -186,6 +186,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .mission-header {
@@ -230,9 +231,13 @@ body {
     margin-bottom: 30px;
 }
 
-.support-goal {
+.support-goal-container {
     font-size: 2.25rem;
     margin-top: 70px;
+}
+
+.support-goal {
+    text-wrap: nowrap;
 }
 
 .goal-counter {
@@ -400,7 +405,6 @@ body {
 
     .mission-page {
         font-size: 2rem;
-        margin-bottom: 100px;
     }
 
     .support-page {
@@ -413,10 +417,11 @@ body {
 }
 
 @media (max-width: 1100px) {
-    .header-links.active {
-        transform: translateX(0);
-        transition: transform .35s ease-in;
+    .header {
+        padding: 0 20px;
     }
+
+    
 
     .header-links {
         position: fixed;
@@ -430,6 +435,11 @@ body {
         transform: translateX(110%);
         transition: transform .35s ease-out;
         box-shadow: 0px 0px 30px 13px rgba(0,0,0,0.29);
+    }
+
+    .header-links.active {
+        transform: translateX(0);
+        transition: transform .35s ease-in;
     }
 
     .burger-menu {
@@ -448,9 +458,6 @@ body {
 }
 
 @media (max-width: 900px) {
-    .header {
-        padding: 0 20px;
-    }
     .footer-top, .footer-bottom {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -522,7 +529,7 @@ body {
     }
 
     .button {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .newsletter-form input {
@@ -567,10 +574,6 @@ body {
 
     .about-description {
         font-size: 1.2rem;
-    }
-
-    .about-image img {
-        width: 250px;
     }
 
     .newsletter-form input {
