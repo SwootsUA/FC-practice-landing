@@ -97,7 +97,7 @@ body {
     align-items: center;
     height: 100vh;
     background-repeat: no-repeat;
-    background-image: url('../images/hero-background.png');
+    background-image: url('../images/hero-background.jpg');
     background-position: 50%;
     background-size: cover;
 }
